@@ -75,6 +75,13 @@
 | `\q` | Quit psql |
 | `\x` | Toggle expanded output |
 
+## Backup and Restore
+
+| Command | Description |
+| --- | --- |
+| `pg_dump <database> > backup.sql` | Backup a database to a file |
+| `psql <database> < backup.sql` | Restore a database from a file |
+
 # SQL Cheat-Sheet
 
 ## Data Definition Language (DDL)
@@ -164,10 +171,3 @@
 | `GRANT ALL PRIVILEGES ON <db> TO '<user>'@'<host>'` | Grant all privileges to a user |
 | `REVOKE ALL PRIVILEGES ON <db> FROM '<user>'@'<host>'` | Revoke all privileges from a user |
 | `FLUSH PRIVILEGES` | Reload privileges from the grant tables |
-
-## Backup and Restore
-
-| Command | Description |
-| --- | --- |
-| `pg_dump <database> > backup.sql` | Backup a database to a file |
-| `psql <database> < backup.sql` | Restore a database from a file |
